@@ -1,0 +1,6 @@
+{
+    "github-username": "username",
+    "favourite-programming-language": "c/java/python/c++/if other mention",
+    "dream company": "gogole",
+    "favourite-os": "Linux/windows"
+}
