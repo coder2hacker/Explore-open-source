@@ -1,7 +1,7 @@
 # Explore-open-source and become contributor 
 
 
-- Welcome to open-source contribution. Coder2hacker platform will beginner developers to provide guidance and benefits of using and exploring the open-source platform. Share, fork, star the repository to get updated. 
+- Welcome to open-source contribution. Coder2hacker platform will provide guidance to Beginner Developers and make them understand the benefits of using and exploring open source platforms.. Share, fork, star the repository to get updated. 
 
 - This repo is basically made for a complete beginner make his/her first contribution and get acquainted with the open source 
 😍
