@@ -18,7 +18,7 @@ Coder2hacker platform will provide guidance to beginner developers and make them
 ```git checkout <BRANCH_NAME>```
 1. Create a new file named ```<YOUR_GITHUB_USERNAME>.json``` and create content as shown in sample [here](https://github.com/coder2hacker/Explore-open-source/blob/main/contributor.json).
 1. Stage the changes by using the command ```git add .```.
-1. Commit the changes made by using the command ```git commit -m "<YOUR_MESSAGE>"```. Give an appropriate message explaining the changes you made.
+1. Commit the changes made by you using the command ```git commit -m "<YOUR_MESSAGE>"```. Give an appropriate message explaining the changes you made.
 1. Push the changes using ```git push```
 1. After you push the changes head over to the forked repo and a ```Compare & pull request``` button will appear. 
 1. Click on that button and you will be taken to a page where you can create a pull request. After you have submitted the PR, we will review your work and approve the PR and merge it with the master branch.
