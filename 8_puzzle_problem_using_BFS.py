@@ -34,7 +34,7 @@ happen in sequence in order to visit a node:
   not be added to the frontier again.
 
 '''
-
+# This is a puzzle program file.
 # importing the necessary libraries
 from time import time
 from queue import Queue
