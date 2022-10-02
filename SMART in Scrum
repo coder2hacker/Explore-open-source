@@ -1,0 +1,30 @@
+
+As a good Scrum Product Owner, you should have the capability to write effective user stories properly and define task in a manageable way. SMART is an abbreviation to cross check your task's quality. While setting goal or while concentrating on task list, you can take SMART as an approach. SMART stands for
+
+S=> Specific
+M=> Measurable
+A=> Achievable
+R=> Relevant
+T => Time boxed
+
+Specific: Define specific task/feature/goal so that everyone can understand. A user story normally defined in  a specific format. Which is like "As a..., I/we want to ..., So that...". It means you must have the following specifically mentioned in your task's flash card
+
+a. Who,
+b. What,
+c. When,
+d. Where and
+e. Why.
+
+Measurable: Your task must be a measurable one. It means, you must define story points properly and you know the velocity of your team.
+
+Achievable: This says your team must finish the iterations properly to achieve the goal in a time-boxed manner.
+
+Relevant: Task must be relevant, where team supposed to contribute. Developers should be able to justify the tasks properly
+
+Time boxed: It should not be a formal estimation of the tasks assigned. It should be the expectation which is again achievable. 
+
+Hope you enjoyed this technical note. Understanding INVEST in SCRUM you can refer this.
+
+You are requested to write comments below to motivate me.
+ 
+
