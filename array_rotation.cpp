@@ -11,6 +11,16 @@ void leftRotateArray(int arr[], int r, int n)
     reverse(arr + 0, arr + n);
 }
 
+void rightRotateArray(int arr[], int r, int n)
+{
+    r = r % n;
+    if (r == 0)
+        return;
+    reverse(arr + (n-r), arr + n);
+    reverse(arr + 0, arr + (n-r));
+    reverse(arr + 0, arr + n);
+}
+
 void printArray(int arr[], int size)
 {
     for (int i = 0; i < size; i++)
@@ -28,7 +38,11 @@ int main()
         cin >> arr[i];
     cout << "Enter the Rotating Factor: ";
     cin >> r;
+    cout<<"Left Rotated"<<endl;
     leftRotateArray(arr, r, n);
+    printArray(arr, n);
+    cout<<"Right Rotated"<<endl;
+    rightRotateArray(arr, r, n);
     printArray(arr, n);
     return 0;
 } 
