@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+      function msg(){
+          alert('Hello World...');
+      }
+      function AskName(){
+
+          //BEDMAS After all these, Assignment Operation gets performed
+          var name =  prompt('Hello, Type your Name:');
+               Id = 12;
+         // alert(prompt('Hello, Type your Name:'));
+         alert(Id);
+          alert(name);
+
+      }
+
+      function stringFunc()
+      {
+
+        // var hw = 'Hello World...';
+
+        // alert(hw.substr(0,5));
+        // alert(hw.substr(6,5));
+
+        // // First way of writing a loop
+        // for(var i=0;i<hw.length;i++){
+        //     console.log("\nValue At ",i+hw[i]);
+        // }
+   
+        // // //Second way of writing a loop
+        // // for(var ch of hw)
+        // //         console.log(ch);
+
+        // var newString = 'Hello ' + 'World ';
+        // alert(newString);
+        // alert(newString.length);
+
+        // var str1 = "This is 'simple' string";
+
+        // var str2 = 'This is "simple" string';
+
+        // alert(str1);
+        // alert(str2);
+
+        // var str3 = "This is \"simple\" string";
+
+        // var str4 = 'This is \'simple\' string';
+   
+        // alert(str3);
+        // alert(str4);
+
+        // var path = "C:\\abc";
+        // alert(path);
+
+
+    //    //Replace Function
+    //    var instituteName = "Microsoft";
+
+    //    var afterReplacing = instituteName.replace("Microsoft","Google");
+
+    //    alert(afterReplacing);
+    //    alert(instituteName);
+
+
+
+    }
+
+    function understandingArray(){
+      var arr = [];
+      alert(arr);
+      var b1 = Boolean('');
+    }
+
+    function DateExperiment()
+    {
+        // var newDateObject = new Date();
+        // var dateString = "3/8/2022";
+        // var newDateObjectdate = new Date(dateString);
+
+        // var year=2022;
+        // var monthIndex = 8;
+        // var newDateObjectyear = new Date(year, monthIndex);
+    //    var newDateObjectday = new Date(year, monthIndex, day);
+    //    var newDateObjecthours = new Date(year, monthIndex, day, hours);
+    //    var newDateObjectmins = new Date(year, monthIndex, day, hours, minutes);
+    //    var newDateObjectsecs = new Date(year, monthIndex, day, hours, minutes, seconds);
+    //    var newDateObjectmss = new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds);
+    //    alert(newDateObject+'\n'+newDateObjectdate+'\n'+newDateObjectyear);
+    //    alert(newDateObject);
+    //    alert(newDateObjectdate);
+    //    alert(newDateObjectyear);
+
+                // var date = new Date('4-7-2015'); // M-D-YYYY
+
+                // var d = date.getDate();
+                // var m = date.getMonth() + 1;
+                // var y = date.getFullYear();
+
+                // alert(date+'\n'+ d+'\n'+m+'\n'+y);
+                // var dateString = (d <= 9 ? '0' + d : d) + '-' + (m <= 9 ? '0' + m : m) + '-' + y;
+                // alert(dateString);
+                // //+ '-' + (m <= 9 ? '0' + m : m) + '-' + y
+    }
+
+    function CopyToLabel() {
+            //Reference the TextBox.
+            var txtName = document.getElementById("txtName");
+            //Reference the Label.
+            var lblName = document. getElementById("lblName");
+            //Copy the TextBox value to Label.
+            lblName.innerHTML = txtName.value;
+}
+    function   TernaryOperator()
+    {
+
+        var a=5;b=7;
+        var c = (b>a)?b:a;
+        alert(c);
+    }
+
+
+    function understandingArrayObject(){
+
+        var myArray = [1,'Sourav','9430037370',true];
+        var arrayList = '';
+        for(var i=0;i<myArray.length;i++){
+
+            arrayList = arrayList + myArray[i] + ', ';
+        }
+        lblName.innerHTML = arrayList.toString();
+    }
+
+    </script>
+    <title>::: Global Logic :::</title>
+</head>
+<body>
+    I love <B>India</B> 
+    <blink>Why would somebody use this?</blink>
+    <input type="button" value="Click" onclick="msg()">
+    <input type="button" value="Prompt" onclick="AskName()">
+    <input type="button" value="String" onclick="stringFunc()">
+    <input type="button" value="Array" onclick="understandingArray()" >
+    <input type="button" value="Date Experiment" onclick="DateExperiment()">
+    <input type="button"    value="T Operator" onclick="TernaryOperator()">
+    <input type="button"    value="Print Array" onclick="understandingArrayObject()">
+<p></p>
+    <input type="text" id="txtName"/>
+    <input type="button" id = "btnCopy" value="Copy To Label" onclick = "CopyToLabel()" />
+    <hr />
+    <label id = "lblName"></label>
+</body>
+</html>
