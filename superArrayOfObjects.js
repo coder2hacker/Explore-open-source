@@ -31,7 +31,29 @@ const superAob = (data, victim) => {
     return superArrayOfObjects;
 }
 
+const superAobMethodSecond = (data, victim) => {
+
+    const totalKeys = []
+    data.forEach(a =>  {
+    if(!totalKeys.includes(a[victim]))
+    { 
+      totalKeys.push(a[victim]);
+    }
+    });
+    
+    let superArrayOfObjects = [];  
+    totalKeys.forEach((types) => {
+
+        const length = data.filter((aobject)=> aobject[victim] === types).length;
+        superArrayOfObjects = [...superArrayOfObjects, { victim: types, count: length}];
+    })
+  
+    return superArrayOfObjects;
+}
+
 console.log(superAob(aob, 'framework'));
+
+console.log(superAobMethodSecond(aob, 'framework'));
 
 // output:-
 // [
