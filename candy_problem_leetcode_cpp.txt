@@ -1,0 +1,28 @@
+class Solution {
+public:
+    int candy(vector<int>& ratings) 
+    {
+        int n=ratings.size(),sum=0,i;
+        vector<int> fc(n,1),ec(n,1);
+        for(i=1;i<n;i++)
+        {
+            if(ratings[i]>ratings[i-1])
+            {
+                fc[i]=fc[i-1]+1;
+            }
+            
+        }
+        for(i=n-2;i>=0;i--)
+        {
+            if(ratings[i]>ratings[i+1])
+            {
+                ec[i]=ec[i+1]+1;
+            }
+        }
+        for(i=0;i<n;i++)
+        {
+            sum+=max(fc[i],ec[i]);
+        }
+        return sum;
+    }
+};
