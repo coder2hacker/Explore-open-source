@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Birthday</title>
+</head>
+<body>
+  <section>
+    <h1 class="shadow">Happy birthday</h1>
+    <div class="banner">
+      <div class="blocks"></div>
+    </div>
+  </section>
+
+
+  <script>
+    // const banner=document.querySelector('.banner');
+    // const blocks=document.querySelector('.blocks');
+    const banner=document.getElementsByClassName('banner')[0];
+    const blocks=document.getElementsByClassName('blocks');
+    for(var i=1;i<400;i++){
+      banner.innerHTML+="<div class='blocks'></div>";
+      blocks[i].style.animationDelay=`${i*0.05}s`
+    }
+  </script>
+</body>
+</html>
