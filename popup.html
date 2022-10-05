@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Open+Sans"
+			type="text/css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+			integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7"
+			crossorigin="anonymous"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<title>Quick Launcher</title>
+		<style>
+			html,
+			body {
+				/* font-family:'Open Sans',sans-serif;
+       */
+				font-family: "Kaisei Tokumin", serif;
+				font-size: 14px;
+				margin: 0;
+				min-height: 180px;
+				padding: 0;
+				width: 384px;
+			}
+			h1 {
+				font-family: "Menlo", monospace;
+				font-size: 22px;
+				font-weight: 400;
+				margin: 0;
+				color: #2f5876;
+			}
+			a:link,
+			a:visited {
+				color: #000;
+				outline: 0;
+				text-decoration: none;
+			}
+			img {
+				width: 30px;
+			}
+			.modal-header {
+				align-items: center;
+				border-bottom: 0.5px solid #dadada;
+			}
+			.modal-content {
+				padding: 0 22px;
+			}
+			.modal-icons {
+				border-top: 0.5px solid #dadada;
+				height: 50px;
+				width: 100%;
+			}
+			.logo {
+				padding: 16px;
+			}
+			.logo-icon {
+				vertical-align: text-bottom;
+				margin-right: 12px;
+			}
+			.version {
+				color: #444;
+				font-size: 12px;
+			}
+			.flex-container {
+				display: flex;
+				justify-content: space-between;
+				padding: 10px 22px;
+			}
+			.flex {
+				opacity: 1;
+				transition: opacity 0.2s ease-in-out;
+				width: 120px;
+			}
+			.flex:hover {
+				opacity: 0.4;
+			}
+			.flex .fa {
+				font-size: 40px;
+				color: #2f5876;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="modal-header">
+			<h1 class="logo">
+				<img
+					src="images/icon48.png"
+					alt="Launcher"
+					srcset=""
+					class="logo-icon"
+				/>
+				Quick Launcher <span class="version">(1.0.0)</span>
+			</h1>
+		</div>
+		<div class="modal-content">
+			<p>Easily Acess To Daily Uses Websites</p>
+		</div>
+		<div class="modal-icons">
+			<div class="flex-container">
+				<div class="flex">
+					<a href="https://practice.geeksforgeeks.org/" target="_blank">
+						<i class="fa fa-globe" style="color: rgb(247, 74, 238)"></i>
+						<!-- <span class="material-icons-outlined"> -->
+						<!-- public -->
+						<!-- </span> -->
+						<!-- <i class="fa fa-address-book" style="font-size:24px"></i> -->
+					</a>
+				</div>
+				<div class="flex">
+					<a
+						href="https://youtube.com/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<i class="fa fa-youtube" style="color: red"></i>
+					</a>
+				</div>
+				<div class="flex">
+					<a
+						href="https://www.twitter.com/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<i class="fa fa-twitter" style="color: blue"></i>
+					</a>
+				</div>
+				<div class="flex">
+					<a
+						href="https://github.com/shubham-1903"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<i class="fa fa-github" style="color: rgb(71, 75, 75)"></i>
+					</a>
+				</div>
+				<div class="flex">
+					<a href="https://facebook.com/" target="_blank">
+						<i class="fa fa-facebook" style="color: rgb(109, 231, 247)"></i>
+					</a>
+				</div>
+				<div class="flex">
+					<a href="https://web.whatsapp.com/" target="_blank">
+						<i class="fa fa-whatsapp" style="color: rgb(18, 238, 18)"></i>
+					</a>
+				</div>
+				<div class="flex">
+					<a href="https://leetcode.com/problemset/all/" target="_blank">
+						<span class="iconify" data-icon="simple-icons:leetcode"></span>
+						<!-- <i class="fa fa-heartbeat" style="color:rgb(238, 161, 18)"></i> -->
+					</a>
+				</div>
+			</div>
+		</div>
+		<script src="popup.js"></script>
+		<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+	</body>
+</html>
