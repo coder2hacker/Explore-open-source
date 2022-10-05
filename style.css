@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Poppins", sans-serif;
+}
+section {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background: #333;
+}
+section h1 {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	text-align: center;
+	line-height: 100vh;
+	font-size: 10vw;
+	color: #fff;
+  text-transform: uppercase;
+	text-shadow: 2px 2px #cfc6c3, 3px 3px #d1c5c0, 4px 4px #d1c2bc;
+}
+/* .shadow {
+	color: white;
+	font: bold 52px Helvetica, Arial, Sans-Serif;
+	text-shadow: 1px 1px #cfc6c3, 2px 2px #d1c5c0, 3px 3px #d1c2bc;
+	-webkit-transition: all 0.12s ease-out;
+	-moz-transition: all 0.12s ease-out;
+	-ms-transition: all 0.12s ease-out;
+	-o-transition: all 0.12s ease-out;
+} */
+.banner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-wrap: wrap;
+}
+.banner .blocks {
+	position: relative;
+	display: block;
+	width: 5vw;
+	height: 5vh;
+	/* background: #fff; */
+	animation: animate 0.75s ease-in-out forwards;
+}
+.banner .blocks:nth-child(even) {
+	animation: animate 1s ease-in-out forwards;
+}
+.banner .blocks:nth-child(7n + 3) {
+	animation: animate 2.5s ease-in-out forwards;
+}
+.banner .blocks:nth-child(7n + 5) {
+	animation: animate 1.5s ease-in-out forwards;
+}
+@keyframes animate {
+	0% {
+		opacity: 0;
+		transform: scale(0) translateY(1000px);
+	}
+	50% {
+		opacity: 1;
+		background: url("cake1.JPG");
+		background-position: center;
+		background-attachment: fixed;
+		background-size: contain;
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1) translateY(0);
+		background: url("cake1.JPG");
+		background-position: center;
+		background-attachment: fixed;
+		background-size: contain;
+	}
+}
