@@ -1,0 +1,27 @@
+h1,h2,body{
+	text-align: center;
+	border-bottom: solid black;
+	border-width:2px ;
+}
+body {
+	background-image: url(https://www.desktopbackground.org/download/1024x768/2012/11/01/477111_background-images-for-web-pages-hd-wallpapers-pretty_1024x768_h.jpg);
+	margin-top: 15px;
+	margin-right: 10px;
+	margin-bottom: 16px;
+	margin-bottom: 15px;
+}
+.container{
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	width: 75vw;
+	background: #6fd5e659;
+	padding: 25px;
+}
+.register{
+	margin: 25px;
+	font-size: 15px;
+	padding: 7px 10px;
+	background-color: black;
+	color: white;
+}
