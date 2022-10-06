@@ -15,6 +15,6 @@ int main(void)
     string binary;
     cout << "Enter a binary number: ";
     cin >> binary;
-    cout << "The decimal representation of binary number " << binary << " is " << bintodec(binary) << endl;
+    cout << "The Decimal Representation of the Binary Number " << binary << " is " << bintodec(binary) << endl;
     return 0;
 }
