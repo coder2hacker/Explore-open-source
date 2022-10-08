@@ -1,0 +1,69 @@
+Ransom Note
+
+Given two strings ransomNote and magazine, return true if ransomNote can be constructed by using the letters from magazine and false otherwise.
+
+Each letter in magazine can only be used once in ransomNote.
+
+ Example 1:
+
+Input: ransomNote = "a", magazine = "b"
+Output: false
+Example 2:
+
+Input: ransomNote = "aa", magazine = "ab"
+Output: false
+Example 3:
+
+Input: ransomNote = "aa", magazine = "aab"
+Output: true
+ Constraints:
+
+1 <= ransomNote.length, magazine.length <= 105
+ransomNote and magazine consist of lowercase English letters.
+
+Time Complexity -o(n)
+Space Complexity -o(n)
+
+Java Solution
+
+class Solution {
+    public boolean canConstruct(String ransomNote, String magazine) {
+     HashMap<Character,Integer>hmr=new HashMap<Character,Integer>();
+     HashMap<Character,Integer>hmm=new HashMap<Character,Integer>();    
+     for(int i=0;i<Math.max(ransomNote.length(),magazine.length());i++){
+         if(i<ransomNote.length())
+         {
+         char ch=ransomNote.charAt(i);
+         if(hmr.get(ch)==null)
+             hmr.put(ch,1);
+         else
+         {
+             int n=hmr.get(ch);
+             hmr.put(ch,++n);
+         }
+         }
+        if(i<magazine.length())
+         {
+         char ch=magazine.charAt(i);
+         if(hmm.get(ch)==null)
+             hmm.put(ch,1);
+         else
+         {
+             int n=hmm.get(ch);
+             hmm.put(ch,++n);
+         }
+         }
+         
+     }
+         for(int i=0;i<ransomNote.length();i++){
+         char ch=ransomNote.charAt(i);
+         if(hmm.get(ch)==null)
+             return false;
+         if(hmr.get(ch)>hmm.get(ch))
+            return false;
+
+     }
+        return true;
+    }
+}
+         

@@ -1,0 +1,250 @@
+Private Sub Command1_Click()
+Label2.Visible = True
+Timer2.Enabled = True
+
+End Sub
+
+Private Sub Command2_Click()
+'Label2.Visible = False
+Timer2.Enabled = False
+
+
+End Sub
+
+Private Sub Timer1_Timer()
+List1.AddItem Now
+
+End Sub
+
+Private Sub Timer2_Timer()
+Label2.Caption = Time
+
+End Sub
+
+
+
+
+
+From Sukriti Aggarwal to Everyone 10:09 AM
+Private Sub Command1_Click()
+Label2.Visible = True
+Timer2.Enabled = True
+
+End Sub
+
+Private Sub Command2_Click()
+'Label2.Visible = False
+Timer2.Enabled = False
+
+
+End Sub
+
+Private Sub Timer1_Timer()
+List1.AddItem Now
+
+End Sub
+
+Private Sub Timer2_Timer()
+Label2.Caption = Time
+
+End Sub
+
+
+===============================
+prince background code 
+Form1.Backcolor=rbg(255,0,0)
+
+
+====================================================================================================
+
+:::::nikita wrote the code::::::time minute and second in 1 lable:::::::::::::
+
+
+Private Sub res_Click()
+Dim a, b, rest As Integer
+a = CInt(txtInput1.Text)
+b = CInt(txtInput2.Text)
+If opyAdd = True Then
+rest = a + b
+ElseIf optSub = True Then
+rest = a - b
+ElseIf OptMul = True Then
+rest = a * b
+End If
+
+lblOut.Caption = rest
+End Sub
+
+
+::::::for display system time in single label::::::::
+
+lblSec.Caption = Minute(Now) & " : " & Second(Now)
+
+::::::::for timer:::::::
+a = a + 1
+lblSec.Caption = a
+If a = 60 Then
+min = min + 1
+lblSec.Caption = "00"
+lblmin.Caption = min
+End If
+
+
+=====================================================================================================
+
+From m.charan to Everyone 01:10 PM
+
+::::::string function in vb6 started code :: intput name krke::hitachi::::::::::::
+
+
+Private Sub Cmd_Msg_Click()
+Dim username As String
+username = InputBox("enter your name", "Hitachi", "your name", 5000, 7000)
+If username <> "" Then
+ Label2.Caption = username
+ Else
+ Label2.Caption = "no name supplied"
+ End If
+
+End Sub
+From m.charan to Everyone 01:16 PM
+Private Sub Cmd_Msg_Click()
+Dim username As String
+username = InputBox("enter your name", "Hitachi", "sample name", 5000, 7000)
+If username <> "" Then
+ Label2.Caption = username
+ Else
+ Label2.Caption = "please enter your name"
+ End If
+
+End Sub
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::string manipulation functions in vb6::::::::::::
+::::::::::::::::::::::::::ayush's code::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Private Sub Command1_Click()
+
+Dim a As String
+
+a = Text1.Text
+Label2.Caption = Right(a, 4)
+Label3.Caption = Left(a, 4)
+Label4.Caption = Mid(a, 3, 6)
+Label5.Caption = UCase(a)
+Label6.Caption = LCase(a)
+Label7.Caption = Trim(a)
+
+End Sub
+
+::::::::::::::::::::::::::Jaignesh's code::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+Private Sub Command1_Click()
+Dim store, result As String
+store = Text1.Text
+If Option1.Value = True Then
+result = Len(store)
+MsgBox ("Length of given string = " & result)
+ElseIf Option2.Value = True Then
+num = InputBox("Enter the number", "Right")
+result = Right(store, num)
+MsgBox ("Right of String is = " & result)
+ElseIf Option3.Value = True Then
+result = Left(store, 4)
+MsgBox ("left of String is = " & result)
+ElseIf Option4.Value = True Then
+result = LTrim(store)
+MsgBox ("Ltrim is =" & result)
+ElseIf Option5.Value = True Then
+result = RTrim(store)
+MsgBox ("Rtrim is = " & result)
+ElseIf Option6.Value = True Then
+result = Trim(store)
+MsgBox ("Trim is = " & result)
+ElseIf Option7.Value = True Then
+result = Mid(store, 3, 6)
+MsgBox ("SubString is= " & result)
+ElseIf Option8.Value = True Then
+result = Mid(1, store, "basic")
+MsgBox ("Instring start from = " & result)
+ElseIf Option9.Value = True Then
+result = UCase(store)
+MsgBox ("Upper case string is =" & result)
+ElseIf Option10.Value = True Then
+result = LCase(store)
+MsgBox ("lower case string is =" & result)
+ElseIf Option11.Value = True Then
+result = Chr(
+
+:::::array program in vb6::::::
+:::::::ayush:::::::::::
+
+Dim arr(5), i As Integer
+
+Private Sub Command1_Click()
+
+For i = 0 To 4 Step 1
+arr(i) = Val(InputBox("Enter any number"))
+Next
+
+ For i = 0 To 4 Step 1
+ Print (arr(i))
+ Next
+
+   button k nadr upper code 
+=========================
+
+
+Dim studentName(1 To 10) As String
+Dim num As Integer
+Private Sub addName()
+For num = 1 To 10
+studentName(num) = InputBox("Enter the student name", "Enter Name", "", 1500, 4500)
+If studentName(num) <> "" Then
+Form1.Print studentName(num)
+Else
+End
+End If
+Next
+End Sub
+
+=====================
+:::::::jaignesh pre defin array code::::::::
+
+Private Sub Command1_Click()
+Dim arr(5) As Integer
+Dim length As Integer
+length = 5
+arr(1) = 10
+arr(2) = 20
+arr(3) = 30
+arr(4) = 40
+arr(5) = 50
+For i = 1 To length Step 1
+MsgBox (arr(i))
+Next i
+
+:::::::Aditi's Code::::::::::::::
+
+Private Sub Command1_Click()
+Dim stu, subj As Integer
+Dim marks(1 To 4, 1 To 5) As Integer
+Const j = 1
+List1.AddItem vbTab & "Maths" & vbTab & "Science" & vbTab & "English" & vbTab & "Hindi" & vbTab & "Social"
+List1.AddItem vbTab & "__________________________________________________________________________________"
+For stu = 1 To 4
+For subj = 1 To 5
+marks(stu, subj) = InputBox("Enter the marks for" & " " & "Student" & " " & stu & " " & "Subject" & " " & subj)
+
+Next subj
+Next stu
+
+For i = 1 To 4
+
+List1.AddItem "Student" & "" & i & vbTab & marks(i, j) & vbTab & marks(i, j + 1) & vbTab & marks(i, j + 2) & vbTab & marks(i, j + 3) & vbTab & marks(i, j + 4)
+Next i
+
+End Sub
+

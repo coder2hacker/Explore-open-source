@@ -1,0 +1,187 @@
+25 lesser-known Java libraries you should try in 2020
+Libraries that can significantly help your software development in Java and JVM
+
+Image by StartupStockPhotos from Pixabay
+25years ago, James Gosling created Java and changed the programming language landscape forever. Unlike many other programming languages, Java enjoyed high popularity and high demand in the industry in its entire lifespan.
+
+Java has a compelling Core library, which offers many basic functionalities. Due to its high popularity, there exists many mature and powerful Java library. As a pragmatic Software developer, I prefer solving business problems. To solve the common or reoccurring problems, I prefer using a mature library instead of reinventing the wheel.
+
+In a previous blog post, I have listed 10 most important third-party Java libraries every Java developers should know:
+
+Top 10 Libraries every Java Developer should know
+A curated list of the essential Java libraries in Java and JVM software development
+towardsdatascience.com
+
+In this post, I want to introduce 25 additional Java libraries to celebrate Java’s Silver Jubilee. These libraries are mature and can offer a battle-hardened solution to common problems you may face in Java software development.
+
+Please note that I am not including those libraries which I have already listed in my previous post. Also, I am mainly listing libraries and no frameworks here.
+
+1. RxJava
+Reactive Extensions (ReactiveX) is a popular software development paradigm to deal with asynchronous and event-driven programming. RxJava is the Java VM implementations of the Reactive Extensions by using Observables. It extends the Observer Pattern to support event-driven programming by adding composable operators on a sequence of events/data in a declarative way. It also hides the low-level complexities like threading, thread-safety, synchronization, and concurrent data structure.
+
+If you want to do reactive programming in Java, it is a must-have library.
+
+Link:
+ReactiveX/RxJava
+RxJava is a Java VM implementation of Reactive Extensions: a library for composing asynchronous and event-based…
+github.com
+
+2. OkHttp
+HTTP is by far the most used Application layer protocol. There are many excellent Java-based HTTP client libraries out there. But OkHttp is the simplest yet powerful HTTP client library in the JVM. It offers fluent and clean API to develop HTTP client in Java.
+
+It also supports some advanced features: Connection pooling, GZIP shrink, response caching, modern TLS features, and many more.
+
+Link:
+square/okhttp
+See the project website for documentation and APIs. HTTP is the way modern applications network. It’s how we exchange…
+github.com
+
+3. MyBatis
+In most Software development projects, we need to store data. Although there are many types of data storage, SQL is still the most used data storage type. As a Java developer, we need to match our Java object to the SQL table. One way to achieve the mapping is to use ORM (e.g., Hibernate). But there are many use cases when you want to have full control over the Object-Table mapping (e.g., Performance). In those cases, you can directly use JDBC and write the SQL query. The other way is to use MyBatis to map Java Object to Stored Procedure or SQL statements. It offers both annotation-based or XML descriptor based mapping.
+
+I prefer MyBatis over plain JDBC, especially in larger projects, as it improves the separation of concerns.
+
+Link:
+mybatis/mybatis-3
+The MyBatis SQL mapper framework makes it easier to use a relational database with object-oriented applications…
+github.com
+
+4. HikariCP
+HikariCP is the second library in this list related to Database. Establishing a JDBC connection is resource expensive. If you create a new connection every time you access the Database and close it once you are done, it can severely impact your application performance. Not to mention that failure to close the connection properly or allowing limitless database connection can crash your application.
+
+Using Connection Pooling means connections are reused rather than created each time a connection is requested. HikariCP is a very fast yet lightweight Database connection pooling in JVM. It is also very reliable and a “zero-overhead” JDBC connection pool.
+
+Link:
+brettwooldridge/HikariCP
+Fast, simple, reliable. HikariCP is a “zero-overhead” production-ready JDBC connection pool. At roughly 130Kb, the…
+github.com
+
+5. Lombok
+In modern days, Java is often criticized as a verbose and bloated programming language. Compared to other popular languages (JavaScript, Python, Scala, Kotlin), a developer needs to write lots of boilerplate code in Java. Although Java has introduced Records in JDK 15 to reduce boilerplate code in Java, it is not an LTS release. Fortunately, a library can already reduce your boilerplate code in Java significantly: Project Lombok. You can generate getters, setters, hashcode, equals, toString, Builder classes by adding a few annotations. Additionally, it offers null pointer check, logger, and many more.
+
+Link:
+rzwitserloot/lombok
+Project Lombok is a java library that automatically plugs into your editor and build tools, spicing up your java. Never…
+github.com
+
+6. VAVR
+Java finally released the much-awaited functional programming via Lambda and Streaming in version 8. If you are used to functional programming or want to dive deep into functional programming, you may find Java’s functional programming wanting. Compared to many other functional programming languages (Haskell, Scala), Java is pale. VAVR is a library that can fill the gap of the functional programming features in Java. It provides persistent collections, functional abstractions for error handling, concurrent programming, pattern matching, and much more.
+
+Link:
+Vavr
+Oracle and Java are registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their…
+www.vavr.io
+
+7. Gson
+Over the years, JSON has become the de-facto data exchange format. In Java, there also exist several excellent libraries to deal with JSON. One of them is Jackson, which I have covered in my previous article. The other excellent library is Google’s Gson. Unlike Jackson, it is a minimalistic library and only supports JSON. It offers Data Binding, extensive Generic support, flexible customization. One of the major advantage (or disadvantage depending on your liking) of Gson is that it does not need annotation.
+
+Link:
+google/gson
+Gson is a Java library that can be used to convert Java Objects into their JSON representation. It can also be used to…
+github.com
+
+8. jsoup
+If you are developing your application in Java and need to deal with HTML, you should use jsoup. It is a Java library to work with real-world HTML. It provides a very convenient API for fetching URLs and extracting and manipulating data. It implements the WHATWG HTML5 specification and parses HTML using the best of HTML5 DOM methods. It supports parsing HTML from URL/string, find and extract data, manipulate the HTML elements, clean HTML, output HTML.
+
+Link:
+jhy/jsoup
+jsoup is a Java library for working with real-world HTML. It provides a very convenient API for fetching URLs and…
+github.com
+
+9. JIB
+If you are working on an enterprise-grade application, it should be at least Cloud-ready. The first step to make your application cloud-ready is to containerize your application, i.e., put your artifactory binary into Docker image. Dockerizing a Java application is a bit tedious work: you need to have deep knowledge of Docker, you need to create a Dockerfile, and you will need Docker Daemon. Fortunately for the Java developers, Google has created an Open-source Java containerizer using already existing tools. You can use JIB as a Java library to build an optimized Docker and OCI image.
+
+Link
+GoogleContainerTools/jib
+What do you like best about Jib? What needs to be improved? Please tell us by taking a one-minute survey. Your…
+github.com
+
+10. Tink
+Tink is yet another handy Java library in this list from Google. Cryptography and security are becoming increasingly more important in Software Development. Cryptographic techniques are used to secure user data. Implementing cryptography correctly requires a lot of expertise and effort. A group of Cryptographers and security engineers in Google has written the multi-language cryptographic library Tink. It offers easy-to-use but hard to misuse security API. Tink offers cryptographic functionalities via different primitives. It provides symmetric key encryption, streaming symmetric key encryption, deterministic symmetric key encryption, digital signature, hybrid encryption, and many other encryption functionalities.
+
+Link:
+google/tink
+Tink is a multi-language, cross-platform, open source library that provides cryptographic APIs that are secure, easy to…
+github.com
+
+11. Webmagic
+If you work on Web crawling, you can write your own crawler, which is time-consuming and tedious. In Java, Webmagic is an excellent Web crawler library that covers the complete life-cycle of crawler: downloading, URL management, content extraction, persistence. It offers a simple yet flexible core, Annotation support, multi-threaded, and easy-to-use API.
+
+Link:
+code4craft/webmagic
+Readme in Chinese A scalable crawler framework. It covers the whole lifecycle of crawler: downloading, url management…
+github.com
+
+12. ANTLR 4
+If you work on parsing and processing data, then the ANTLR library could be handy. It is a powerful parser generator for reading, processing, executing, or translating structured text or binary files. It does this by giving us access to language processing primitives like lexers, grammars, parsers, and the runtime to process text against them.
+
+It’s often used to build tools and frameworks.
+
+Link:
+antlr/antlr4
+ANTLR (ANother Tool for Language Recognition) is a powerful parser generator for reading, processing, executing, or…
+github.com
+
+13. Caffeine
+If your application is read-heavy, then caching can dramatically improve your application’s data access performance. Java has many great caching libraries. Caffeine is the best among the lot. It is a high-performance, near-optimal caching library based on Java. It offers a fluent caching API and some advanced features like asynchronous loading of entries, asynchronous refresh, weak referenced keys, etc.
+
+Link:
+ben-manes/caffeine
+Caffeine is a high performance, near optimal caching library based on Java 8. For more details, see our user’s guide…
+github.com
+
+14. Metrics
+Once your Java application runs into production, you will want to have insight into your application's critical components. Metrics from the Dropwizard framework is a simple yet compelling Java library that provides insight into your application and JVMs KPI, e.g., rate of events, pending jobs, service health check, and more. It is modular and offers modules for other libraries/frameworks.
+
+Link:
+dropwizard/metrics
+📈 Capturing JVM- and application-level metrics. So you know what’s going on. For more information, please see the…
+github.com
+
+15. gRPC-Java
+Google has created gRPC as a modern Remote Procedure Call system in 2015. Since then, gRPC became extremely popular and one of the most used RPC system in modern software development. The library gRPC-Java is the Java implementation of the gRPC client. If you want to use gRPC in Java, then this library can be handy for you.
+
+Link:
+grpc/grpc-java
+gRPC-Java works with JDK 7. gRPC-Java clients are supported on Android API levels 16 and up (Jelly Bean and later)…
+github.com
+
+16. Java WebSocket
+Traditional Client-Server communications unidirectional. WebSocket is a bi-directional communication protocol over a single TCP connection. Java WebSocket is a barebone WebSocket server and client implementation in Java. If you are a Java developer and want to work with WebSocket, this library is highly recommended.
+
+Link:
+TooTallNate/Java-WebSocket
+This repository contains a barebones WebSocket server and client implementation written in 100% Java. The underlying…
+github.com
+
+17. JJWT
+JSON Web Token (JWT) is the de-facto Authorization and secure Information exchange format in modern software development. Whether you are using a simple session-based Authorization or highly advanced OAuth2 based Authorization, you will probably use JWT. JJWT is a simple Java library for creating and verifying JWT in Java and JVM landscape. It is fully RFC specification compliant on all implemented functionality. It supports readable and convenient fluent API.
+
+Link:
+jwtk/jjwt
+JJWT aims to be the easiest to use and understand library for creating and verifying JSON Web Tokens (JWTs) on the JVM…
+github.com
+
+18. Swagger-Core
+OpenAPI is the specification for machine-readable interface files for describing, producing, consuming, and visualizing RESTful web services. Swagger-Core is the Java implementation of the OpenAPI specification. If you are exposing REST API in your Java/JavaEE application, you can automatically provide and expose your API definitions using Swagger-Core.
+
+Link:
+swagger-api/swagger-core
+NOTE: If you’re looking for Swagger Core 1.5.X and OpenAPI 2.0, please refer to 1.5 branch. Swagger Core is a Java…
+github.com
+
+19. Async Http Client
+Asynchronous programming is becoming increasingly popular of late because of its non-blocking nature. Most of the popular Java HTTP client libraries offer limited to no asynchronous HTTP response processing. Async Http Client is a popular Java library that offers asynchronous HTTP response processing. As a bonus feature, this library also supports the WebSocket protocol.
+
+Link:
+AsyncHttpClient/async-http-client
+Follow @AsyncHttpClient on Twitter. The AsyncHttpClient (AHC) library allows Java applications to easily execute HTTP…
+github.com
+
+20. Liquibase
+As a software developer, we all know the importance of version control, DevOps, and CI/CD of our code. In a blog post: Evolutionary Database Design, the great Martin Fowler argued that we also need version control and CI/CD of our code. Liquibase is a tool that supports tracking, version controlling, and deployment of SQL database changes in Java Applications. If you are working with an SQL database where the database is evolving, this tool can greatly simplify your database migration.
+
+Link:
+Liquibase | Open Source Version Control for Your Database
+Flexible database change Easily define changes in SQL, XML, JSON, or YAML. Version control for your database Order…
+www.liquibase.org
