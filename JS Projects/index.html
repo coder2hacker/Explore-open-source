@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+<h1>Demo JS</h1> 
+     <!-- <button>Namaste World !</button>  -->
+     <button>Roll No. 1 : Rahul Kumar</button>
+     
+     <!-- javascript hamesha body tag ke last mein likhi jaati hai kyunki isse kya hai agar pehli hogi toh JS apni DOM manipulations krna start kr dega pehle he but tab toh html elements bhi render nhi huye hote hai toh....-->
+
+     <!-- ya fir add event listener lagao k jab DOMContentLoaded ho tabhi run krna hai !!  -->
+
+     <script>
+          document.addEventListener('DOMContentLoaded', function()
+          {
+               const para = document.querySelector('button');
+               para.addEventListener('click', updateName);
+               function updateName()
+               {
+                    let name = prompt("Enter your name");
+
+                    para.textContent = 'Mera naam '+ name;
+               }})
+     </script>
+
+
+
+
+<!-- ye async attribute mein jaise he website open hogi async wali files execution mein aani start ho jayegi , incase agar multiple files huyi async wali toh saari files ek saath load hona start ho jayegi -->
+     <script src="./index.js" async></script>
+
+
+
+
+
+     <!-- defer wali script file jahan bhi likho ye chalega tabhi jab website mein html, css render ho chuki hogi !, and in case agar multiple files huyi toh first come first serve hoga, tab tak second file load nhi hogi jab tak complete dom and first file download complete nhi ho jaati -->
+     <script src="./index.js" defer></script>
+
+</body>
+
+</html>
