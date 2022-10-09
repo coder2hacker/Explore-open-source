@@ -8,12 +8,20 @@ if(i == 0, j == 0)
 {
 return 0;
 }
+  
 if(j == 1)
 {
 return i;
 }
+  
+if(i == 1)
+{
+return j;
+}
+  
 return (evalmul (i, j-1) + i);
 }
+
 void main()
 {
 clrscr();

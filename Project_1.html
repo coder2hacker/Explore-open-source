@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Form</title>
+	<link rel="stylesheet" type="text/css" href="cssProject.css">
+</head>
+<body>
+	<div class="conatiner">
+		<h1>ACADEMY OF TECHNOLOGY</h1>
+		<h2>Student Registration Form</h2>
+		<div class="form-wrapper">
+			<form action=" ">
+				<div class="form-item">
+					<label for="fullname"><strong>Student Name:</strong></label>
+					<input type="text" name="fullname" id="fullname" placeholder="Full Name" required>
+				</div>
+				<br>
+				<div class="form-item">
+					<label for="username"><strong>Father's Name:</label>
+					<input type="text" name="username" id="Fathersname" placeholder="Father's Full Name" required>
+				</div>
+				<br>
+				<div class="form-item">
+					<label for="username"><strong>Mother's Name:</strong></label>
+					<input type="text" name="username" id="Mothersname" placeholder="Mother's Full Name" required>
+				</div>
+				<br>
+				<div class="form-item">
+				<label for="gender"><strong>Gender:</strong></label>
+				<div class="genders">
+					Male
+					<input type="radio" name="gender" id="gender" value="male" required>
+					Female
+					<input type="radio" name="gender" id="gender" value="female" required>
+					Others
+					<input type="radio" name="gender" id="gender" value="others" required>
+				</div>
+				</div>
+				<br>
+				<div class="form-item">
+					<label for="email"><strong>Date of Birth:</strong></label>
+					<input type="date" name="DOB" id="DOB" required>
+				</div><br>
+				<div class="form-item">
+					<label for="email" ><strong>Email:</strong></label>
+					<input type="email" name="email" id="email" placeholder="email@xyz.com" required>
+				</div><br>
+				<div class="form-item">
+					<label for="sem"><strong>Year:</strong></label>
+					<select name="year" id="year">
+						<option value="year">1st</option>
+						<option value="year">2nd</option>
+						<option value="year">3rd</option>
+						<option value="year">4th</option>
+						</select>
+				</div><br>
+				<div class="form-item">
+					<label for="education"><strong>Eduaction:</strong></label>
+					<select name="eduaction" id="education">
+						<option value="highschool">B.Tech</option>
+						<option value="highschool">M.Tech</option>
+						<option value="highschool">Ph.D</option>
+					</select>
+				</div><br>
+				<div class="form-item">
+					<label for="department"><strong>Department:</strong></label>
+						<select name="department" id="department">
+						<option value="computer">CSE</option>
+						<option value="computer">CSBS</option>
+						<option value="computer">ECE</option>
+						<option value="computer">EEE</option>
+						<option value="computer">EE</option>
+						<option value="computer">ME</option>
+					</select>
+					</label>
+				</div><br>
+				<div class="form-item">
+					<label for="phonenumber"><strong>Tel/Mobile:</strong></label>
+					<input type="tel" name="phonenumber" id="phonenumber" placeholder="XXX XXX XXXX" required>
+				</div><br>
+				<button
+					class="register" type="submit">Register</button>
+				</form>
+			</div>
+		</div>
+	</body>
+	</html>
+
+

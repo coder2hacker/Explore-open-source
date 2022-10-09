@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Text-input design material</title>
+	<style>
+		body
+		{
+			display: grid;
+			place-items: center;
+			height: 100vh;
+			background: #2a9d8f;
+			font-family: 'Poppins';
+		}
+		.wrapper
+		{
+			position: relative;
+			border: 2px solid #fff;
+			background: #2a9d8f;
+			height: 55px;
+			border-radius: .7em;
+
+		}
+		input
+		{
+			position: relative;
+			height: 55px;
+			width: 190px;
+			background: transparent;
+			border: 0;
+			font-size: 1em;
+			font-weight: bold;
+			text-indent: .75rem;
+			color: #fff;
+			outline: none;
+		}
+		.placeholder
+		{
+			color: #fff;
+			position: absolute;
+			z-index: 0;
+			top: 0;
+			left: 0;
+			padding: 0 .2em;
+			font-weight: bold;
+			transform: translate(.5em, .8em);
+			transform-origin: 0% 0%;
+			background: #2a9d8f;
+			pointer-events: none;
+			transition: transform .3s ease, background .3s ease;
+		}
+		input:focus + .placeholder{
+			transform: translate(.625rem,-.7em) scale(0.8);
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<input type="text" />
+		<div class="placeholder">
+			First Name
+		</div>
+	</div>
+
+</body>
+</html>

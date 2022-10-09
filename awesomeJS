@@ -1,0 +1,28 @@
+
+
+
+How JS works?
+
+Everything in JS happens inside an Execution Context.
+
+Execution Context:
+Component where JS is executed. It has:
+1.Memory or Variable Env
+Here variables are stored as key: valuepair.
+2.Code Env or Thread of execution
+This is the place where code is executed one line at a time.
+Note: JavaScript is a synchronous single-thread language.
+
+1nd Phase: Memory creation phase
+
+Everything happens in a ‘Global’ execution context.
+In this phase, memory is allocated to all variables and function(s).
+For variable(s), key is the variable name itself and value is undefined (even if the variable is initialized). And, for
+function(s), key is the function name and value is body of the
+code.
+2nd Phase: Code Execution phase
+
+Code is traversed line by line and actual value of variables are assigned to them.
+
+A new ‘local’ execution context is created, when function
+‘invocation’ is encountered. Again, two phase perform their role.
