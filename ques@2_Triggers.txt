@@ -1,0 +1,137 @@
+:::Ques@2::::::::trigger creation:::::::::::::
+
+
+
+
+USE [BikeStores]
+GO
+/** Object:  Trigger [sales].[trg_customer_audit]    Script Date: 8/16/2022 5:18:22 PM **/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		Ayush Shukla
+-- Create date: 16 aug 2022
+-- Description:	<Description,,>
+-- =============================================
+ALTER TRIGGER [sales].[trg_customer_audit]
+   ON  [sales].[customers]
+  AFTER INSERT,DELETE
+AS 
+BEGIN
+	
+	SET NOCOUNT ON;
+
+ insert into sales.customer_audit(
+      customer_id
+      ,first_name
+      ,last_name
+      ,phone
+      ,email
+      ,street
+      ,city
+      ,state
+      ,zip_code,
+	  updated_at,
+	   operation)
+
+	   select
+	    i.customer_id
+      ,first_name
+      ,last_name
+      ,phone
+      ,email
+      ,street
+      ,city
+      ,state
+      ,i.zip_code,
+	   GETDATE(),
+    'INS'
+	FROM
+    inserted AS i
+UNION ALL
+   SELECT
+    customer_id
+      ,first_name
+      ,last_name
+      ,phone
+      ,email
+      ,street
+      ,city
+      ,state
+      ,d.zip_code,
+	   GETDATE(),
+    'DEL'
+	 FROM
+        deleted AS d;
+END
+
+
+
+:::::::::::new query window's code here::::::::::::::
+
+
+select *from [sales].[customers]
+
+		create table sales.customer_audit(
+		change_id INT IDENTITY PRIMARY KEY,
+		customer_id INT not null,
+	   first_name varchar(255) not null,
+	   last_name varchar(255) not null,
+			   phone varchar(25) not null,
+			   email varchar(255)not null,
+			   street varchar(255)not null,
+			   city varchar(50)not null,
+			   state   varchar(25)not null,
+			   zip_code varchar(5) not null,
+			   updated_at DATETIME NOT NULL,
+	        	operation CHAR(3) NOT NULL,
+        		CHECK(operation = 'INS' or operation='DEL')
+		)
+
+	select * from sales.customer_audit
+
+	insert into sales.customers(
+      
+      first_name
+      ,last_name
+      ,phone
+      ,email
+      ,street
+      ,city
+      ,state
+      ,zip_code)
+
+	 values
+	 (
+	 'ayush',
+	 'shukla',
+	 '9305559507',
+	 'ayush.shukla@gmail.com',
+	 'Saketnagar',
+	 'kanpur',
+	 'uttarpradesh',
+	 '208014')
+
+	 delete from sales.customers
+	 where
+	 customer_id=1446
+
+	 select * from sales.customers
+	 select * from sales.customer_audit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
