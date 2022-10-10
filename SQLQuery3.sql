@@ -1,1 +1,0 @@
-Select * from Students
