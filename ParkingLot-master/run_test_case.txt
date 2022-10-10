@@ -1,0 +1,15 @@
+create_parking_lot 6
+park MH-12-LM-7754 white
+park GJ-11-FM-3421 white
+park DL-01-KL-0786 black
+park JH-04-AK-8654 red
+park MH-12-TR-6636 blue
+park KA-01-AR-2342 black
+leave 4
+status
+park KA-01-P-333 white
+park DL-12-AA-9999 white
+check_car_number_with_carcolor white
+check_slot_number_with_carcolor white
+check_slot_number_with_carno MH-12-LM-7754
+check_slot_number_with_carno KA-01-AR-2342

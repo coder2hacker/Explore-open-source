@@ -1,88 +1,66 @@
-#include<iostream>
-#include<list>
-#include<set>
-#include<vector>
-#include<climits>
+// C++ program implementing dijkstra's algorithm. 
+// Dijkstra's algorithm is used to find the shortest paths from single source to all vertices of a graph. 
+
+#include <bits/stdc++.h>
+
 using namespace std;
 
-class Graph{
+const int N = 1e3;
+const int INF = 1e9;
+vector<int> vis(N);
+vector<pair<int,int>> g[N]; // weithed graph, pair -> <node, weight>
 
-	int V;
-	list<pair<int,int> > *l;
+// dijstra algorithm funciton
+void dijkstra(int src, int nodes){
+    vector<int> dist(N, INF);
 
-public:
-	Graph(int v){
-		V = v;
-		l = new list<pair<int,int> >[V];
-	}
+    set<pair<int, int>> set; // pair -> <wt, node>
+    set.insert({0, src}); // assign wt 0 to source vertex
+    dist[src] = 0;
 
-	void addEdge(int u,int v,int wt,bool undir = true){
+    // first insert <wt,source> pair to set
+    // Two main functions  are : 
+    // 1. update the wt of childs if possible 
+    // 2. then select the new node based on min wt. ( thus used set data structure )
 
-		l[u].push_back({wt,v});
-		if(undir){
-			l[v].push_back({wt,u});
-		}
-	}
+    while(set.size() > 0){
+        auto node = *set.begin(); // gives the min weight node pair
+        int vertex = node.second;
+        int distance = node.first;
+        set.erase(set.begin());
+        if(vis[vertex]) continue;
+        vis[vertex] = 1;
 
-	int dijkstra(int src,int dest){
+        for(auto child: g[vertex]){
+            int child_v = child.first;
+            int wt = child.second;
+            if(dist[vertex] + wt < dist[child_v]){
+                dist[child_v] = dist[vertex] + wt;
+                set.insert({dist[child_v], child_v});
+            }
+        }
+    }
 
-		//Data Structures
-		vector<int> dist(V,INT_MAX);
-		set<pair<int,int> >  s;
-
-		//1. Init 
-		dist[src] = 0;
-		s.insert({0,src});
-
-		while(!s.empty()){
-
-			auto it = s.begin();
-			int node = it->second;
-			int distTillNow = it->first; 
-			s.erase(it); //Pop 
-
-			//Iterate over the nbrs of node
-			for(auto nbrPair : l[node]){
-				//......
-
-				int nbr = nbrPair.second;
-				int currentEdge = nbrPair.first;
-
-				if(distTillNow + currentEdge < dist[nbr]){
-					//remove if nbr already exist in the set
-
-					auto f = s.find({dist[nbr],nbr});
-					if(f!=s.end()){
-						s.erase(f);
-					}
-					//insert the updated value with the new dist
-					dist[nbr] = distTillNow + currentEdge;
-					s.insert({dist[nbr],nbr});
-
-				}
-
-			}
-
-		}
-		//Single Source Shortest Dist to all other nodes
-		for(int i=0;i<V;i++){
-			cout<<"Node i "<<i <<" Dist "<<dist[i] <<endl;
-		}
-		return dist[dest];
-
-	}
-
-};
+    cout << "vertex    distance " << endl;
+    for(int i=0; i<nodes; i++){
+        cout << i << " \t\t  " << dist[i] << endl;
+    }
+}
 
 int main(){
+    int nodes, edges;
+    cout << "Enter number of nodes and edges : ";
+    cin >> nodes >> edges;
+     cout << "Enter "<< edges << " pairs of src, dest, wt vertices of a edge : ";
 
-	Graph g(5);
-	g.addEdge(0,1,1);
-	g.addEdge(1,2,1);
-	g.addEdge(0,2,4);
-	g.addEdge(0,3,7);
-	g.addEdge(3,2,2);
-	g.addEdge(3,4,3);
+    for(int i=0; i< edges; i++){
+        
+        int x,y,wt; // wt is the weight of the edge connecting x, y
+        cin >> x >> y >> wt;
+        g[x].push_back({y,wt}); 
+    }
 
-	cout << g.dijkstra(0,4)<<endl;
+    dijkstra(0, nodes); // assuming 0 as single source here
+
+    return 0;
 }

@@ -1,0 +1,52 @@
+CREATE TABLE New_Table
+([product_id]int NOT NULL,
+[product_name] VARCHAR(255) NOT NULL,
+[brand_id] int,
+[category_id] int,
+[model_year] smallint,
+[list_price] decimal(10,2))
+--Ques@3a..Insert Data into a new table by fetching data from another table.
+INSERT INTO 
+	[dbo].[New_Table]
+	([product_id],
+	[product_name],
+	[brand_id] ,
+	[category_id] ,
+	[model_year] ,
+	[list_price])
+	SELECT 
+	[product_id],
+	[product_name],
+	[brand_id] ,
+	[category_id] ,
+	[model_year] ,
+	[list_price]
+	FROM
+	[production].[products]
+
+	SELECT * FROM [dbo].[New_Table]
+
+
+--Ques@3b.. Select Statement with a Group By Clause
+SELECT SUM([list_price][quantity]) AS 'Money Made',count()AS 'Total orders Made',[product_id],[order_id] 
+FROM [sales].[order_items]
+GROUP BY [product_id],[order_id]
+HAVING SUM([list_price]*[quantity]) > 1000
+
+
+
+--Ques@3c..	Select Statement with Order By Clause
+
+SELECT SUM([list_price][quantity]) AS 'Money Made',count()AS 'Total orders Made',[product_id],[order_id] 
+FROM [sales].[order_items]
+GROUP BY [product_id],[order_id]
+HAVING SUM([list_price]*[quantity]) > 1000
+ORDER BY 'Money Made';
+
+--Ques@3d....example of Inner Join with any table set from the Bike Store Database schema
+
+SELECT        sales.customers.customer_id, sales.customers.first_name, sales.customers.last_name, sales.order_items.order_id, production.products.product_id, production.products.product_name
+FROM            production.products INNER JOIN
+                         sales.order_items ON production.products.product_id = sales.order_items.product_id AND production.products.product_id = sales.order_items.product_id CROSS JOIN
+                         sales.customers INNER JOIN
+                         dbo.Orders ON sales.customers.customer_id = dbo.Orders.Customer_ID
