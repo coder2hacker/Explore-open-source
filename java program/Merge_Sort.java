@@ -53,22 +53,24 @@ class MergeSort {
 		}
 	}
 
-	// Main function that sorts arr[l..r] using
-	// merge()
-	void sort(int arr[], int l, int r)
-	{
-		if (l < r) {
-			// Find the middle point
-			int m = l + (r - l) / 2;
+	/*
+	// Initial indexes of first and second subarrays
+		int i = 0, j = 0;
 
-			// Sort first and second halves
-			sort(arr, l, m);
-			sort(arr, m + 1, r);
-
-			// Merge the sorted halves
-			merge(arr, l, m, r);
+		// Initial index of merged subarray array
+		int k = l;
+		while (i < n1 && j < n2) {
+			if (L[i] <= R[j]) {
+				arr[k] = L[i];
+				i++;
+			}
+			else {
+				arr[k] = R[j];
+				j++;
+			}
+			k++;
 		}
-	}
+	*/
 
 	/* A utility function to print array of size n */
 	static void printArray(int arr[])
