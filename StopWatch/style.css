@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.elements {
+
+    display: flex;
+    margin-top: 20px;
+    font-size: 70px;
+    color: white;
+
+}
+
+.elements span {
+    margin-left: 100px;
+}
+
+.container {
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 370px;
+    height: 500px;
+    width: 600px;
+
+
+}
+
+body {
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+}
+
+#sp {
+    margin-left: -10px;
+    color: rgba(235, 23, 164, 0.61);
+    font-size: 60px;
+}
+
+#button {
+    height: 100px;
+    width: 100px;
+    background: #2c3e50;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3498db, #2c3e50);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3498db, #2c3e50);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    text-align: center;
+    border-radius: 60px;
+    cursor: pointer;
+    border: 2px solid rgb(0, 255, 13);
+    color: rgb(0, 255, 55);
+    font-size: 20px;
+}
+
+
+#button1 {
+    height: 100px;
+    width: 100px;
+    background: #BA5370;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F4E2D8, #BA5370);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F4E2D8, #BA5370);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    text-align: center;
+    border-radius: 60px;
+    cursor: pointer;
+    border: 2px solid red;
+    color: red;
+    font-size: 20px;
+    display: none;
+}
+
+#lap {
+    color: white;
+    margin-left: 400px;
+    font-size: 20px;
+    height: 100px;
+    width: 100px;
+    background: #2C3E50;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FD746C, #2C3E50);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FD746C, #2C3E50);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: none;
+
+
+    text-align: center;
+    border-radius: 60px;
+    cursor: pointer;
+    border: 2px solid red;
+}
+
+h1 {
+
+    color: rgba(235, 136, 23, 0.61);
+    font-size: 60px;
+    margin-left: 40px;
+}
+
+#hrs {
+    margin-left: 170px;
+}
+
+
+#min {
+    margin-left: 40px;
+}
+
+.timer {
+
+    display: flex;
+
+}
+
+span {
+    margin-top: 10px;
+    margin-left: 20px;
+    color: wheat;
+    font-size: 30px;
+}
+
+#addData {
+    margin-left: 127px;
+}
+
+#addData hr {
+    margin-right: 104px;
+    margin-left: -10px;
+}
+
+.container h1 {
+    font-family: 'Titillium Web', sans-serif;
+}
