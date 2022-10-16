@@ -1,0 +1,4 @@
+What is a database management system?
+A database management system (DBMS) is a software tool that enables users to manage a database easily. It allows users to access and interact with the underlying data in the database. These actions can range from simply querying data to defining database schemas that fundamentally affect the database structure.
+
+Furthermore, DBMS allow users to interact with a database securely and concurrently without interfering with each user and while maintaining data integrity.
