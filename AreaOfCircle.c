@@ -4,7 +4,7 @@ float area(int r);
 
 int main(){
 
-    int r, circle_area;
+    float r, circle_area;
 
     printf("\n  Enter The Radius: ");
     scanf("%d", &r);
@@ -21,7 +21,7 @@ return 0;
 
 float area(int r){
 
-    int area1 = (22*r*r)/7;
+    float area1 = (22*r*r)/7;
 
     return area1;
 }
