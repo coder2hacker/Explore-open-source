@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/8213c7bb45.js" crossorigin="anonymous"></script>
+    <title>Shrinkify</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Shrinkify</h1>
+        <form action="/" method="POST" class="my-4 form-inline">
+            <label for="fullUrl" class="sr-only">Url</label>
+            <input required placeholder="Url" type="url" name="fullUrl" id="fullUrl" class="form-control col mr-2">
+
+            <label for="short" class="sr-only">shortUrl</label>
+            <input placeholder="shortUrl (optional)" type="text" name="short" id="short" class="form-control col mr-2">
+            <button class="btn btn-success" type="submit">Shrink</button>
+        </form>
+
+        <table class="table table-hover container">
+            <thead>
+                <tr>
+                    <th>Full URL</th>
+                    <th>Short URL</th>
+                    <th>Clicks</th>
+                    <th>Created At</th>
+                    <th>Last Visited</th>
+                    <th class="text-center">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% shortUrls.forEach(shortUrl=> { %>
+                    <tr>
+                        <td>
+                            <a class="text-dark" href="<%= shortUrl.short %>">
+                                <%= shortUrl.full %>
+                            </a>
+                        </td>
+                        <td class="text-center">
+                            <a class="text-info short-url" href="<%= shortUrl.short %>">
+                                <%= shortUrl.short %>
+                            </a>
+                        </td>
+                        <td class="text-bold text-center">
+                            <%= shortUrl.clicks %>
+                        </td>
+                        <td class="text-muted">
+                            <%= shortUrl.createdAt %>
+                        </td>
+                        <td class="text-muted">
+                            <%= shortUrl.lastVisitedAt %>
+                        </td>
+                        <td class="text-muted d-flex">
+                            <button class="btn btn-link text-muted">
+                                <i class="fa fa-thin fa-copy copy-btn"></i>
+                            </button>
+                            <form action="<%= shortUrl.short%>?_method=DELETE" method="post">
+                                <button class="btn btn-danger"><i class="fa fa-thin fa-trash"></i></button>
+                            </form>
+
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        console.log("hello");
+        const btns = document.querySelectorAll('.copy-btn');
+        const shortUrls = document.querySelectorAll('.short-url');
+        for (let i = 0; i < btns.length; i++) {
+            btns[i].addEventListener('click', () => {
+                navigator.clipboard.writeText(shortUrls[i].href);
+            })
+        }
+    </script>
+</body>
+
+</html>
