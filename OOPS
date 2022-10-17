@@ -35,6 +35,7 @@ So, Objects from the same blueprint, or more formally the same class, share the 
 
 It’s enough for Objects and Classes, Let’s move on to other important concepts in OOP.
 
+
 Abstraction
 Abstraction means you start focusing on the common properties and behaviors of some Objects, and we automatically will discard what’s unimportant or irrelevant.
 
@@ -51,11 +52,11 @@ And As a way to discard what’s unimportant, we should focus on how the class s
 
 Later on, maybe you will be having a specific car brand that has a property or a behavior that’s not common between other car brands, and it’s specific to it’s type. In this case, you will have to do of what’s called “Inheritance”, and we will get into it later.
 
+
 Encapsulation
 Instead of having a procedural, long program, we start to decompose our program into small reusable, manageable chunks. Encapsulation implies the idea of breaking down our program into small mini-programs; classes, where each class has a set of related attributes and behaviors.
 
 Encapsulation also implies the idea of hiding the content of a Class, unless it’s necessary to expose. We need to restrict the access to our class as much as we can, so that we can change the properties and the behaviors only from inside the class.
-
 
 Encapsulation
 But, How can we do that?
@@ -63,6 +64,7 @@ Start building our blueprints, or classes and define their properties and behavi
 
 What’s the difference between Encapsulation and Abstraction?
 Encapsulation is a strategy used as part of abstraction. When we encapsulate, we abstract away the implementation.
+
 
 Abstraction is a more generic term, and it’s often not possible without hiding the object’s class content by encapsulation; if a class exposes its internal content, thus, it cannot be abstracted.
 
@@ -84,6 +86,7 @@ Well, the rule is, as much as possible.
 
 So, the idea of encapsulation is that you enclose your object’s attributes and methods, and then you hide everything about that object except what is absolutely necessary to expose.
 
+
 Inheritance
 Abstraction is, instead of creating different classes, we can instead create one generic class that has the common, and essential properties and behavior of those classes, while Inheritance is inheriting these common properties and behaviors, so that we can create a new class, but instead of writing it from scratch, we can base it on an existing class.
 
@@ -104,6 +107,16 @@ So, a Customer IS-A Person, and an Employee IS-A Person, and so on. The term tha
 Multiple Inheritance
 In C++, & Python allow you to inherit from more than one Super Class; Multiple Inheritance. But, it can get confusing as it’s much more common to inherit from one Super class. In Java & C#, You only inherit from one Super Class.
 
+There are five types of Inheritance-
+1. Single Inheritance
+2. Multiple Inheritance
+3. Multilevel Inheritance
+4. Hybrid Inheritance
+5. Hierarchical Inheritance.
+
+Multiple and Hybrid Inheriance is not directly applied in Java however these can be applied by using interfaces.
+
+
 Polymorphism
 Polymorphism; is the state where an object can take the shape of many different forms, and lets us do the right thing at the right time.
 
@@ -118,4 +131,13 @@ It’s worth mentioning that the speak method in the Animal class will be trigge
 Polymorphism is the flexibility, that triggers the correct behavior.
 
 Putting All Together — Animals Project
+
+There are two types of polymorphism -
+1. Compile-time polymorphism
+2. Run-time polymorphism
+
+Compile-time polymorphism includes method or function overloading and operator overloading but, operator overloading is not applicable in Java. It is also known as Static binding, Early binding and overloading as well.
+
+Run-time polymorphism includes method overriding. It is also known as Dynamic binding, Late binding and overriding as well.
+
 I’ve introduced the concepts of OOP. Here is a complete snippet written in Java that shows a real example combining all of the OOP concepts together.
