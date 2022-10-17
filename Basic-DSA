@@ -1,0 +1,10 @@
+Derived Data Type
+Those data types which are implementation independent as they can be implemented in one or other way are known as derived data types. These data types are normally built by combination of primary or built-in data types and associated operations on them. For example −
+
+List
+
+Array
+
+Stack
+
+Queue
