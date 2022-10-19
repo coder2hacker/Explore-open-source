@@ -1,0 +1,101 @@
+import java.util.*;
+
+public class PrepInsta
+{
+
+  private Node head;
+  class Node
+{
+  int data;
+  Node nextNode;
+
+}
+
+
+  public void append (int data)
+  {
+    //make a new Node and store a data.
+    Node node = new Node ();
+      node.data = data;
+      node.nextNode = null;
+
+    //check if the head is null or not.
+    //if head is null, assign the Node and exit.
+    if (this.head == null)
+      {
+	head = node;
+	
+ return;
+      }
+
+ 
+    //define a head into the temp Node and loop it until find the null.
+    Node tempNode = this.head;
+    while (tempNode.nextNode != null)
+      {
+	tempNode = tempNode.nextNode;
+      }
+
+ 
+    //Add a new node.
+    tempNode.nextNode = node;
+  }
+  
+
+  public void AppendNthNode (int data, int location)
+  {
+  
+   //create new node.
+    Node node = new Node ();
+    node.data = data;
+    node.nextNode = null;
+
+
+    if (this.head == null)
+      {
+	
+ //if head is null and location is zero then exit.
+	if (location != 0)
+	  {
+	   
+  return;
+	  }
+	else
+	  {
+	 
+    // set node to the head.
+	    this.head = node;
+	  }
+      }
+
+    if (head != null && location == 0)
+      {
+	node.nextNode = this.head;
+	this.head = node;
+	return;
+      }
+
+    Node curr = this.head;
+    Node prev = null;
+
+    int i = 0;
+
+    while (i ");
+	tempNode = tempNode.nextNode;
+      }
+    System.out.println ("NULL");
+  }
+  
+
+
+  public static void main (String[]args)
+  {
+    PrepInsta dlist = new PrepInsta ();
+      dlist.append(1);
+      dlist.append(2);
+      dlist.append(4);
+      dlist.append(5);
+      dlist.AppendNthNode(3, 2);
+      dlist.print();
+  }
+}
