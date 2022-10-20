@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
 
-int check ( int n ) {
+int check ( int n )
+{
     int r = 0, sum = 0;
     while ( n > 0 ) {
         r = n % 10;
@@ -11,7 +12,8 @@ int check ( int n ) {
     return sum;
 }
 
-void solve ( int n ) {
+void solve ( int n ) 
+{
     int new_n = n;
     while ( new_n != 1 && new_n != 4 ) {
         new_n = check ( new_n );

@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
 
-int isAutomorphic ( int n ) {
+int isAutomorphic ( int n ) 
+{
     int square = n * n;
     while ( n != 0 )
     {

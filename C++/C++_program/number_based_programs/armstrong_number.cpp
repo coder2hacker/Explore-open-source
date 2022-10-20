@@ -7,7 +7,8 @@ int main () {
     cin >> num;
     originalNum = num;
 
-    while ( originalNum != 0 ) {
+    while ( originalNum != 0 )
+     {
         remainder = originalNum % 10;
 
         result += remainder * remainder * remainder;
