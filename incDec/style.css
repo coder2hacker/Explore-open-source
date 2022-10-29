@@ -1,0 +1,38 @@
+body{
+    background-image: url("./bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+p {
+    display: flex;
+    background-color: rgb(253, 194, 2);
+    height: 100px;
+    width: 100px;
+    margin: 50px;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid black;
+}
+div{
+    display: flex;
+    justify-content: center;
+}
+
+#counter{
+    border: 5px solid black;
+    display: inline;
+    margin: 49%;
+}
+
+#red{
+    background-color: red;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#green {
+    background-color: green;
+}
